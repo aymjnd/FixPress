@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ "$(whoami)" != 'root' ]; then
+	echo $"You don't have the permission to run $0 as non-root user. Sudo maybe?"
+		exit 1;
+fi
+while [ "$dir" == "" ]
+do
+	echo -e $"What is your wordpress absolute path? e.g /var/www/myfirsttime"
+	read dir
+done
+find . -type f -exec chmod 664 {} \;
+find . -type d -exec chmod 775 {} \;
+chmod 660 $dir/wp-config.php
+chown -R www-data:www-data $dir
+echo "Done! Secure anything else if you require so."
