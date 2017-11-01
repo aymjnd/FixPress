@@ -5,12 +5,12 @@ This is my method/approach on setting up the basic/simple permission to get Word
 
 ### Installation
 ```code
-curl -LJO https://raw.githubusercontent.com/anazhd/FixPress/master/fixpress && chmod +x fixpress && mv fixpress /usr/local/bin/
+sudo curl -LJO https://raw.githubusercontent.com/anazhd/FixPress/master/fixpress && sudo chmod +x fixpress && sudo mv fixpress /usr/local/bin/
 ```
 
 ### Example
 ```
-lorem@ipsum:~ fixpress
+lorem@ipsum:~ sudo fixpress
 What is your wordpress absolute path? e.g /var/www/path
 []/var/www/html/blog
 ```
