@@ -8,8 +8,8 @@ do
 	echo -e $"What is your wordpress absolute path? e.g /var/www/myfirsttime"
 	read dir
 done
-find . -type f -exec chmod 664 {} \;
-find . -type d -exec chmod 775 {} \;
+find $dir -type f -exec chmod 664 {} \;
+find $dir -type d -exec chmod 775 {} \;
 chmod 660 $dir/wp-config.php
 chown -R www-data:www-data $dir
 echo "Done! Secure anything else if you require so."
